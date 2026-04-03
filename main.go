@@ -102,6 +102,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	defer db.Close()
 	// настройте подключение к БД
 
 	store := NewParcelStore(db)
